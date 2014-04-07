@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remaining Science</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8">
+        <script src="vendor/jquery-1.11.0.min.js"></script>
+        <script src="vendor/underscore-min.js"></script>
+        <script src="js/parse_sfs.js"></script>
+        <script src="js/extract_completed_science.js"></script>
+        <script src="js/science_department.js"></script>
+        <script src="vendor/react-with-addons.js"></script>
+        <script src="vendor/JSXTransformer.js"></script>
+        
+    </head>
+    <body>
+        <h1>Remaining Science</h1>
+        <p>Drag and drop a KSP save file onto this page.</p>
+
+        <div id="planets">
+    
+        </div>
+    </body>
+</html>
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/jsx" src="js/views.jsx"></script>
+
+<script type="text/jsx">
+      /** @jsx React.DOM */
+      
+  
+          
+      
+      React.renderComponent(
+        <div>
+        <div className="group">
+            <PlanetBox name="Sun"/>
+            <PlanetBox name="Moho" />
+            <PlanetBox name="Eve">
+                <BodyBox name="Gilly" />
+            </PlanetBox>
+
+            <PlanetBox name="Duna">
+                <BodyBox name="Ike" />
+            </PlanetBox>
+        </div>
+        <div className="group">
+            <PlanetBox name="Kerbin" >
+                <BodyBox name="Mun" />
+                <BodyBox name="Minmus" />
+            </PlanetBox>
+        </div>
+        <div className="group">
+            <PlanetBox name="Dres" />
+            <PlanetBox name="Jool" >
+                <BodyBox name="Laythe" />
+                <BodyBox name="Vall" />
+                <BodyBox name="Tylo" />
+                <BodyBox name="Bop" />
+                <BodyBox name="Pol" />
+            </PlanetBox>
+            <PlanetBox name="Eeloo" />
+        </div>
+        </div>
+        ,
+        document.getElementById('planets')
+      );
+    </script>

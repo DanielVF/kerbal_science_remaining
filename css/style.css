@@ -1,0 +1,53 @@
+body { }
+
+.group { clear:both;}
+.planet {
+    float:left;
+}
+
+.body {
+    padding: 4px;
+    border: solid 1px #eee;
+    border-radius: 4px;
+    margin: 4px;
+    height: 440px;
+    float:left;
+}
+
+.biome {
+    height: 200px;
+    float:left;
+    width:72px;
+}
+.biomeHeader {
+    height: 2.2em;
+    clear:both;
+    border-bottom: solid 1px;
+    color:white;
+    background: black;
+    text-align: center;
+}
+
+.science {
+    display: block;
+    padding: 1px 4px;
+    text-align: right;
+    color: white;
+    background: #6FC94C;
+    width: 24px;
+    border-radius: 2px;
+    text-decoration:none;
+    margin:1px 1px;
+    float: left;
+    height: 18px;
+}
+
+.science.nope {
+    background: transparent;;
+}
+.science.completed {
+    background: black;
+}
+.science.started {
+    background: orange;
+}

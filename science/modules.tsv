@@ -1,0 +1,9 @@
+Experiment	 Mystery Goo Observation	 Materials Study	 Temperature Scan	 Atmospheric Pressure Scan	 Seismic Scan	 Gravity Scan	Atmosphere Analysis	Crew Report	EVA Report	Surface Sample
+Required part (tech tree lvl)	Mystery Goo™ Containment Unit (2)	SC-9001 Science Jr. (4)	2HOT Thermometer (5)	PresMat Barometer (6)	Double-C Seismic Accelerometer (7)	GRAVMAX Negative Gravioli Detector (8)	Sensor Array Computing Nose Cone (8)	Crew Report (1)	EVA Report (1)	Surface Sample (1)
+Base value	 10	 25	 8	 12	 20	 20	 20	5	8	30
+Maximum value	 13	 32	 8	 12	 22	 22	 24	5	8	40
+Data scale	 1	 1	 1	 1	 2.5	 3	 10	1	1	1
+Transmission efficiency	 30%	 20%	 50%	 50%	 45%	 40%	 35%	100%	100%	25%
+Processing bonus	 +15%	 +10%	 +25%	 +25%	 +22%	 +20%	 +17%	+12%
+Processing energy (E)	 100	 250	 80	 120	 500	 600	 2000	300
+Tech level	2	4	5	6	7	8	8	1	1	1

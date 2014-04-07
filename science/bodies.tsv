@@ -1,0 +1,18 @@
+Celestial body	 Surface multiplier	 Atmosphere multiplier	 Atmosphere start	 Low space multiplier	 Low Space start
+Sun	 N/A	 N/A		 11	 1 Gm
+Moho	 9	 N/A		 8	 80 km
+Eve	 12	 7	 ~20 km	 7	 400 km
+Gilly	 9	 N/A		 8	 6 km
+Kerbin	 0.3	 0.7	 18 km	 1	 250 km
+Mun	 4	 N/A		 3	 60 km
+Minmus	 5	 N/A		 4	 30 km
+Duna	 8	 7	 12	 7	 140 km
+Ike	 9	 N/A		 8	 50 km
+Dres	 8	 N/A		 7	 25 km
+Jool	 N/A	 7	 ~118 km	 7	 4000 km
+Laythe	 10	 9	 ~10 km	 9	 200 km
+Vall	 10	 N/A		 9	 90 km
+Tylo	 11	 N/A		 10	 250 km
+Bop	 9	 N/A		 8	 25 km
+Pol	 9	 N/A		 8	 ~21 km
+Eeloo	 9	 N/A		 8	 60 km
