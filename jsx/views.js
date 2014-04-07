@@ -63,6 +63,12 @@ var BodyBox = React.createClass({
     getInitialState: function() {
         return {biomes: []};
       },
+    reload: function(){
+        var component = this
+        my_sci = _.filter(RESEARCH_DEPARTMENT.possible_science, function(x){return x.body == component.props.name})
+        biomes = _.groupBy(my_sci, function(x){ return x.biome})
+        component.setState({'biomes': biomes})
+    },
     render: function() {
         var body = this.props.name
         var ordered_biomes = _.chain(this.state.biomes)
@@ -88,10 +94,9 @@ var BodyBox = React.createClass({
     componentWillMount: function() {
         var component = this
         $(document).on('LOADED_NEW_STUFF', function(){
-            my_sci = _.filter(RESEARCH_DEPARTMENT.possible_science, function(x){return x.body == component.props.name})
-            biomes = _.groupBy(my_sci, function(x){ return x.biome})
-            component.setState({'biomes': biomes})
+            component.reload()
         })
+        component.reload()
     }
 })
 
