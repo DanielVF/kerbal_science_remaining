@@ -9,7 +9,6 @@
         <script src="js/extract_completed_science.js"></script>
         <script src="js/science_department.js"></script>
         <script src="vendor/react-with-addons.js"></script>
-        <script src="vendor/JSXTransformer.js"></script>
         
     </head>
     <body>
@@ -22,54 +21,4 @@
     </body>
 </html>
 
-
-
-
-<script>
-
-
-</script>
-
-<script type="text/jsx" src="js/views.jsx"></script>
-
-<script type="text/jsx">
-      /** @jsx React.DOM */
-      
-  
-          
-      
-      React.renderComponent(
-        <div>
-        <div className="group">
-            <PlanetBox name="Sun"/>
-            <PlanetBox name="Moho" />
-            <PlanetBox name="Eve">
-                <BodyBox name="Gilly" />
-            </PlanetBox>
-
-            <PlanetBox name="Duna">
-                <BodyBox name="Ike" />
-            </PlanetBox>
-        </div>
-        <div className="group">
-            <PlanetBox name="Kerbin" >
-                <BodyBox name="Mun" />
-                <BodyBox name="Minmus" />
-            </PlanetBox>
-        </div>
-        <div className="group">
-            <PlanetBox name="Dres" />
-            <PlanetBox name="Jool" >
-                <BodyBox name="Laythe" />
-                <BodyBox name="Vall" />
-                <BodyBox name="Tylo" />
-                <BodyBox name="Bop" />
-                <BodyBox name="Pol" />
-            </PlanetBox>
-            <PlanetBox name="Eeloo" />
-        </div>
-        </div>
-        ,
-        document.getElementById('planets')
-      );
-    </script>
+<script src="js/views.js"></script>
