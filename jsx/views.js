@@ -87,7 +87,7 @@ var BodyBox = React.createClass({
       },
     componentWillMount: function() {
         var component = this
-        $('body').on('LOADED_NEW_STUFF', function(){
+        $(document).on('LOADED_NEW_STUFF', function(){
             my_sci = _.filter(RESEARCH_DEPARTMENT.possible_science, function(x){return x.body == component.props.name})
             biomes = _.groupBy(my_sci, function(x){ return x.biome})
             component.setState({'biomes': biomes})

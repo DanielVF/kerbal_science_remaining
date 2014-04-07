@@ -32,7 +32,7 @@ function load_new_game_save(str){
     campaign_ksf = parse_sfs(str)
     sciences = extract_completed_science(campaign_ksf)
     sciences_by_id = _.chain(sciences).map(function(x){return [x.id, x]}).object().value()
-    $('body').trigger("LOADED_NEW_STUFF")
+    $(document).trigger("LOADED_NEW_STUFF")
 }
 
 
@@ -43,7 +43,6 @@ possible_science = []
 $(function(){
     var dropplace = $('#planets').get(0)
     dropplace.ondrop = function(evt){
-        console.log("BOB")
         evt.preventDefault()
         var file = evt.dataTransfer.files[0]
         var reader = new FileReader()
@@ -52,8 +51,8 @@ $(function(){
         };
         reader.readAsText(file)
     }
-    dropplace.ondragover = function(evt){console.log('a');evt.preventDefault()}
-    dropplace.ondragend = function(evt){console.log('b');evt.preventDefault()}
+    dropplace.ondragover = function(evt){evt.preventDefault()}
+    dropplace.ondragend = function(evt){evt.preventDefault()}
 })
 
 
@@ -94,5 +93,5 @@ function get_all_possible_science_slots(sciences){
 $.get('science/all_science.csv', function(str){
     RESEARCH_DEPARTMENT.possible_science = parse_all_science_csv(str)
     RESEARCH_DEPARTMENT.slots = get_all_possible_science_slots(RESEARCH_DEPARTMENT.possible_science)
-    $('body').trigger("LOADED_NEW_STUFF")
+    $(document).trigger("LOADED_NEW_STUFF")
 })
