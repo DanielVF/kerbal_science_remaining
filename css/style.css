@@ -51,3 +51,5 @@ body { }
 .science.started {
     background: orange;
 }
+
+.pasteSaveBox { clear:both; padding-top:1em;}

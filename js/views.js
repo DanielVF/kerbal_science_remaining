@@ -101,40 +101,19 @@ var BodyBox = React.createClass({displayName: 'BodyBox',
 })
 
 
-React.renderComponent(
-  React.DOM.div(null, 
-  React.DOM.div( {className:"group"}, 
-      PlanetBox( {name:"Sun"}),
-      PlanetBox( {name:"Moho"} ),
-      PlanetBox( {name:"Eve"}, 
-          BodyBox( {name:"Gilly"} )
-      ),
-
-      PlanetBox( {name:"Duna"}, 
-          BodyBox( {name:"Ike"} )
-      )
-  ),
-  React.DOM.div( {className:"group"}, 
-      PlanetBox( {name:"Kerbin"} , 
-          BodyBox( {name:"Mun"} ),
-          BodyBox( {name:"Minmus"} )
-      )
-  ),
-  React.DOM.div( {className:"group"}, 
-      PlanetBox( {name:"Dres"} ),
-      PlanetBox( {name:"Jool"} , 
-          BodyBox( {name:"Laythe"} ),
-          BodyBox( {name:"Vall"} ),
-          BodyBox( {name:"Tylo"} ),
-          BodyBox( {name:"Bop"} ),
-          BodyBox( {name:"Pol"} )
-      ),
-      PlanetBox( {name:"Eeloo"} )
-  )
-  )
-  ,
-  document.getElementById('planets')
-);
+var PasteSaveBox = React.createClass({displayName: 'PasteSaveBox',
+    handleLoad: function(){
+        var contents = this.refs.fileContents.getDOMNode().value.trim();
+        load_new_game_save(contents)
+    },
+    render: function() {
+        return (React.DOM.div( {className:"pasteSaveBox"}, 
+                React.DOM.p(null, "Alternate entry: ", React.DOM.i(null, "Paste in the contents of your KSP save file.")),
+                React.DOM.textarea( {ref:"fileContents"}),React.DOM.br(null ),
+                React.DOM.input( {type:"submit", value:"LOAD", onClick:this.handleLoad})
+            ))
+    }
+})
 
 
 React.renderComponent(
@@ -166,7 +145,8 @@ React.renderComponent(
           BodyBox( {name:"Pol"} )
       ),
       PlanetBox( {name:"Eeloo"} )
-  )
+  ),
+  PasteSaveBox(null)
   )
   ,
   document.getElementById('planets')
