@@ -105,11 +105,12 @@ var PasteSaveBox = React.createClass({displayName: 'PasteSaveBox',
     handleLoad: function(){
         var contents = this.refs.fileContents.getDOMNode().value.trim();
         load_new_game_save(contents)
+        window.scrollTo(0,0);
     },
     render: function() {
         return (React.DOM.div( {className:"pasteSaveBox"}, 
                 React.DOM.p(null, "Alternate entry: ", React.DOM.i(null, "Paste in the contents of your KSP save file.")),
-                React.DOM.textarea( {ref:"fileContents"}),React.DOM.br(null ),
+                React.DOM.textarea( {ref:"fileContents", rows:"4"}),React.DOM.br(null ),
                 React.DOM.input( {type:"submit", value:"LOAD", onClick:this.handleLoad})
             ))
     }
