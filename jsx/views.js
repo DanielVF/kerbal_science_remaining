@@ -21,6 +21,7 @@ var ScienceBox = React.createClass({
         if(progress!=undefined){
             remaining = remaining - progress.sci
         }
+        remaining = Math.max(remaining, 0) // Make sure it doesn't go negative in case of then having more science then max (from old saves or mods).
         var factor = remaining / this.props.science.max
         var status="normal"
         if(factor < 0.1){
