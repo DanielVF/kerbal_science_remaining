@@ -51,12 +51,16 @@ def body_multiplier(body, situation)
     return value.to_f
 end
 
+def body_has_atmosphere?(body)
+    return body['Atmosphere multiplier'] != 'N/A'
+end
+
 def valid_expiriment?(module_name, module_data, biome, biome_data, body, situation, situation_data)
     # return false if not module_name == "Temperature Scan"
     multiplier = body_multiplier(body, situation)
     return false if multiplier.nil?
-    
     return false if biome_data['SURFACE_ONLY'] and not situation.start_with?("Surface")
+    return false if module_data['Atmosphere Required'] == 'Y' and not body_has_atmosphere?(body)
     
     type = situation_data[module_name]
     if type == "Global"
