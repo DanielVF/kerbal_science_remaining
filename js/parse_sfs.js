@@ -69,7 +69,6 @@ this.parse_sfs = (function(){
       peg$subclass(SyntaxError, Error);
 
       function parse(input) {
-              // console.log(input)
         var options = arguments.length > 1 ? arguments[1] : {},
 
             peg$FAILED = {},
@@ -88,8 +87,8 @@ this.parse_sfs = (function(){
             peg$c8 = "=",
             peg$c9 = { type: "literal", value: "=", description: "\"=\"" },
             peg$c10 = function(key, value) { return [key,value]; },
-            peg$c11 = /^[A-Za-z0-9_]/,
-            peg$c12 = { type: "class", value: "[A-Za-z0-9_]", description: "[A-Za-z0-9_]" },
+            peg$c11 = /^[A-Za-z0-9_.]/,
+            peg$c12 = { type: "class", value: "[A-Za-z0-9_.]", description: "[A-Za-z0-9_.]" },
             peg$c13 = function(str) { return str.join("")},
             peg$c14 = /^[^\r\n]/,
             peg$c15 = { type: "class", value: "[^\\r\\n]", description: "[^\\r\\n]" },
