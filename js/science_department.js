@@ -66,7 +66,7 @@ function parse_all_science_csv(str){
         sci = {'body':cols[0],'instrument':cols[2],'biome':cols[1], 'level':cols[3], 'location':cols[4], 'base': cols[5], 'max': cols[6]}
         sci.biome = sci.biome == "Universal" ? sci.body : sci.biome // Merge universale into planetary biome
         var short = RESEARCH_DEPARTMENT.SHORT_FORMS
-        sci.id = short[sci.instrument]+"@"+sci.body+short[sci.location]+(sci.biome!=sci.body ? sci.biome.replace(' ','') : '')
+        sci.id = short[sci.instrument]+"@"+sci.body+short[sci.location]+(sci.biome!=sci.body ? sci.biome.replace(/ /g,'') : '')
         out.push(sci)
     }
     return out
