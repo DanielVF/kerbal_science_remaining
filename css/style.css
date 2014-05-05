@@ -1,4 +1,6 @@
-body { }
+body { 
+    background: #DEE7E0;
+}
 
 .group { clear:both;}
 .planet {
@@ -9,6 +11,7 @@ body { }
     padding: 4px;
     border: solid 1px #eee;
     border-radius: 4px;
+    background: white;
     margin: 4px;
     height: 440px;
     float:left;
