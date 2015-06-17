@@ -24,9 +24,14 @@ If you pass in a string that won't parse, this will blow up spectacularly in an 
 
 */
 
-
-
 this.parse_sfs = (function(){    
+
+    function clog(method, msg){
+        var entry = ".".repeat(clog.tab) + method + " " + msg;
+        console.log(entry);
+    }
+	clog.tab = 0;
+
 
     var parse = function(str){
         return KS.parser.parse(clean_stage(str))
@@ -87,7 +92,7 @@ this.parse_sfs = (function(){
             peg$c8 = "=",
             peg$c9 = { type: "literal", value: "=", description: "\"=\"" },
             peg$c10 = function(key, value) { return [key,value]; },
-            peg$c11 = /^[A-Za-z0-9_.\/]/,
+            peg$c11 = /^[^\s\=\{\}]/,
             peg$c12 = { type: "class", value: "[A-Za-z0-9_.]", description: "[A-Za-z0-9_.]" },
             peg$c13 = function(str) { return str.join("")},
             peg$c14 = /^[^\r\n]/,
@@ -323,8 +328,12 @@ this.parse_sfs = (function(){
                       s6 = peg$c2;
                     }
                     if (s6 !== peg$FAILED) {
+                      clog("start parsing list", s2);
+                      clog.tab++;
                       s7 = peg$parsenodes();
+                      clog.tab--;
                       if (s7 !== peg$FAILED) {
+                        clog("finished parsing list" , s2);
                         s8 = peg$parsewhitespace();
                         if (s8 === peg$FAILED) {
                           s8 = peg$c2;
@@ -443,6 +452,7 @@ this.parse_sfs = (function(){
             s0 = peg$c1;
           }
 
+          clog("peg$parsestringkeyvalue", s0);
           return s0;
         }
 
