@@ -328,12 +328,12 @@ this.parse_sfs = (function(){
                       s6 = peg$c2;
                     }
                     if (s6 !== peg$FAILED) {
-                      clog("start parsing list", s2);
-                      clog.tab++;
+                      //clog("start parsing list", s2);
+                      //clog.tab++;
                       s7 = peg$parsenodes();
-                      clog.tab--;
+                      //clog.tab--;
                       if (s7 !== peg$FAILED) {
-                        clog("finished parsing list" , s2);
+                        //clog("finished parsing list" , s2);
                         s8 = peg$parsewhitespace();
                         if (s8 === peg$FAILED) {
                           s8 = peg$c2;
@@ -452,7 +452,7 @@ this.parse_sfs = (function(){
             s0 = peg$c1;
           }
 
-          clog("peg$parsestringkeyvalue", s0);
+          //clog("peg$parsestringkeyvalue", s0);
           return s0;
         }
 
