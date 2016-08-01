@@ -43,6 +43,11 @@ this.parse_sfs = (function(){
         .replace(/[ \t]+\n/g,'\n')
         .replace(/[\r\n]+/g,'\n')
         .replace("\x05","")
+
+        // Horrible hack to remove the LoaderInfo section, which is unparseable
+        // by this parser but I can't find the generator for the parser
+        // anywhere.  Hope you don't have any modules with "{" or "}" in the name!
+        .replace(/LoaderInfo\s+\{[^}]+\}/, "")
         + "\n")
     }
 
