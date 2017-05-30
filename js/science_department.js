@@ -25,7 +25,7 @@ RESEARCH_DEPARTMENT = {
         'Seismic Scan':'seismicScan',
         'Surface Sample':'surfaceSample',
         'Materials Study':'mobileMaterialsLab',
-        'Atmospheric Pressure Scan': 'pressureScan',
+        'Atmospheric Pressure Scan': 'barometerScan',
         'Temperature Scan':'temperatureScan',
         'Atmosphere Analysis': 'atmosphereAnalysis',
         'Infrared Telescope': 'infraredTelescope'
