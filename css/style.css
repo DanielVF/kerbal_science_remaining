@@ -13,34 +13,58 @@ body {
     border-radius: 4px;
     background: white;
     margin: 4px;
-    height: 440px;
+ 
     float:left;
 }
-
+.biome progress{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:1px;
+}
 .biome {
-    height: 200px;
+    
     float:left;
-    width:72px;
+    width:84px;
+    margin:1px;
+    padding:0px 1px 1px 1px;
+    background-color:#ddddff
 }
 .biomeHeader {
-    height: 2.2em;
+    height: 5em;
+    width:84px;
     clear:both;
     border-bottom: solid 1px;
     color:white;
-    background: black;
-    text-align: center;
+    background: rgba(32, 64, 200, 1);
+    text-align:center;
+    display: table-cell;
+    vertical-align: middle;
+    
 }
-
-.science {
+.sciall{
     display: block;
     padding: 1px 4px;
     text-align: right;
     color: white;
     background: #6FC94C;
-    width: 24px;
+    width: 74px;
     border-radius: 2px;
     text-decoration:none;
-    margin:1px 1px;
+    margin-left:1px;
+    margin-bottom:3px;
+    float: left;
+    height: 18px;
+}
+.science {
+    display: block;
+    padding: 1px 6px;
+    text-align: right;
+    color: white;
+    background: #6FC94C;
+    width: 28px;
+    border-radius: 2px;
+    text-decoration:none;
+    margin:1px;
     float: left;
     height: 18px;
 }
