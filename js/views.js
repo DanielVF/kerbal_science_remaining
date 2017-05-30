@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+
 var PlanetBox = React.createClass({displayName: 'PlanetBox',
     render: function(){
         var className = "planet "+this.props.name
@@ -14,15 +15,18 @@ var PlanetBox = React.createClass({displayName: 'PlanetBox',
 var ScienceBox = React.createClass({displayName: 'ScienceBox',
     render: function(){
         if(this.props.science == undefined){
-            return (React.DOM.a( {className:"science nope", href:"#"}))
+            return (React.DOM.a( {className:"science nope"}))
         }
         var progress = sciences_by_id[this.props.science.id]
-        var remaining = this.props.science.max;
+        var scimax = this.props.science.max;
+        var sciprog = 0;
+        var remaining = scimax;
         if(progress!=undefined){
-            remaining = remaining - progress.sci
+            sciprog = progress.sci;
         }
-        remaining = Math.max(remaining, 0) // Make sure it doesn't go negative in case of then having more science then max (from old saves or mods).
-        var factor = remaining / this.props.science.max
+        remaining -= sciprog;
+        //remaining = Math.max(remaining, 0) // Make sure it doesn't go negative in case of then having more science then max (from old saves or mods).
+        var factor = remaining / scimax;
         var status="normal"
         if(factor < 0.1){
             status="completed"
@@ -31,10 +35,11 @@ var ScienceBox = React.createClass({displayName: 'ScienceBox',
         }
 
         var remainingDsp = Math.ceil(remaining)
-        var alt = this.props.science.instrument + "  " + this.props.science.location
+        sciprog = Math.round(sciprog*10)/10;
+        var alt = this.props.science.instrument + "  " + this.props.science.location + ": " + sciprog + "/" + scimax;
         var className = "science "+status
         return (
-            React.DOM.a( {className:className, href:"#", title:alt}, 
+            React.DOM.a( {className:className, title:alt}, 
             remainingDsp
             )
         )
@@ -50,9 +55,35 @@ var BiomeBox = React.createClass({displayName: 'BiomeBox',
             })
             return (ScienceBox( {science:science}))
         })
-        
+        var scimaxall=0;
+        var sciprogall=0;
+        for (var i=0;i<sciences.length;i++)
+        {
+            if(sciences[i].props.science == undefined)
+            {
+                continue;
+            }
+            var scimax = parseFloat(sciences[i].props.science.max);
+            var sciprog = 0;
+            var progress = sciences_by_id[sciences[i].props.science.id];
+            if(progress!=undefined){
+                sciprog = parseFloat(progress.sci);
+                sciprogall += sciprog
+            }
+            if(scimax < sciprog)
+            {
+                scimaxall += sciprog;
+            }else
+            {
+                scimaxall += scimax;
+            }
+        }
+        var rmall = scimaxall-sciprogall;
+        rmall = Math.round(rmall*10)/10;
         return (
             React.DOM.div( {className:"biome"}, 
+            React.DOM.progress( {value:sciprogall, max:scimaxall} ),
+            React.DOM.div( {className:"sciall"}, rmall),
             React.DOM.div( {className:"biomeHeader"}, this.props.biomeName),
             sciences
             )
@@ -74,21 +105,19 @@ var BodyBox = React.createClass({displayName: 'BodyBox',
         var body = this.props.name
         var ordered_biomes = _.chain(this.state.biomes)
             .map(function(v, k){return[v,k]})
-            .sortBy(function(x){return x[1]==body ? '0000' : x[1] }) // Body's main bio goes first
+            //.sortBy(function(x){return x[1]==body ? '0000' : x[1] }) // Body's main bio goes first
             .value()
         var biomes = _.map(ordered_biomes, function(x){
             var possibleSciences=x[0], biomeName=x[1]
             return (BiomeBox( {biomeName:biomeName, possibleSciences:possibleSciences} ))
         })
         
-        var body_width = _.keys(this.state.biomes).length * 72;
+        var body_width = _.keys(this.state.biomes).length * 88;
         var style = {width: body_width+"px"}
         
         return (
           React.DOM.div( {className:"body", style:style}, 
-            React.DOM.div(null, 
             biomes
-            )
           )
         );
       },
@@ -121,23 +150,18 @@ var PasteSaveBox = React.createClass({displayName: 'PasteSaveBox',
 React.renderComponent(
   React.DOM.div(null, 
   React.DOM.div( {className:"group"}, 
-      PlanetBox( {name:"Sun"}),
+      PlanetBox( {name:"Kerbol"} ),
       PlanetBox( {name:"Moho"} ),
       PlanetBox( {name:"Eve"}, 
           BodyBox( {name:"Gilly"} )
       ),
-
-      PlanetBox( {name:"Duna"}, 
-          BodyBox( {name:"Ike"} )
-      )
-  ),
-  React.DOM.div( {className:"group"}, 
       PlanetBox( {name:"Kerbin"} , 
           BodyBox( {name:"Mun"} ),
           BodyBox( {name:"Minmus"} )
-      )
-  ),
-  React.DOM.div( {className:"group"}, 
+      ),
+      PlanetBox( {name:"Duna"}, 
+          BodyBox( {name:"Ike"} )
+      ),
       PlanetBox( {name:"Dres"} ),
       PlanetBox( {name:"Jool"} , 
           BodyBox( {name:"Laythe"} ),
