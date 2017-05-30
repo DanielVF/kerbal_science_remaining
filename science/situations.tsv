@@ -1,7 +1,7 @@
-Situation 	Surface Sample	EVA Report	Crew Report	Mystery Goo Observation	Materials Study	Temperature Scan	Atmospheric Pressure Scan	Gravity Scan	Seismic Scan	Atmosphere Analysis
-Surface: Landed	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome
-Surface: Splashed	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	—	—
-Flying Low	 —	Biome	Biome	Global	Global	Biome	Global	—	—	Biome
-Flying High	 —	Global	Global	Global	Global	Global	Global	—	—	Biome
-In Space Low	—	Biome	Global	Global	Global	Global	—	Biome	—	—
-In Space High	—	Global	Global	Global	Global	—	—	Biome	—	—
+Situation 	Surface Sample	EVA Report	Crew Report	Mystery Goo Observation	Materials Study	Temperature Scan	Atmospheric Pressure Scan	Gravity Scan	Seismic Scan	Atmosphere Analysis	Infrared Telescope
+Surface: Landed	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	-
+Surface: Splashed	Biome	Biome	Biome	Biome	Biome	Biome	Biome	Biome	-	-	-
+Flying Low	 -	Biome	Biome	Global	Global	Biome	Global	-	-	Biome	-
+Flying High	 -	Global	Global	Global	Global	Global	Global	-	-	Biome	-
+In Space Low	-	Biome	Global	Global	Global	Global	Global	Biome	-	-	-
+In Space High	-	Global	Global	Global	Global	Global	Global	Biome	-	-	Global

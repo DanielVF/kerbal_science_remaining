@@ -9,13 +9,15 @@ This file is horrible, horrible mess.
 RESEARCH_DEPARTMENT = {
     'possible_science': [],
     'slots': [],
-    'LOCATION_ORDERS': ['In Space High','In Space Low', 'Flying High', 'Flying Low', 'Surface: Landed'],
+    'LOCATION_ORDERS': ['Surface: Landed', 'Surface: Splashed', 'Flying Low', 'Flying High', 'In Space Low', 'In Space High'],
+    'INSTRUMENT_ORDERS':['Surface Sample', 'EVA Report', 'Crew Report', 'Mystery Goo Observation', 'Materials Study', 'Temperature Scan', 'Atmospheric Pressure Scan', 'Seismic Scan', 'Atmosphere Analysis','Infrared Telescope', 'Gravity Scan'],
     'SHORT_FORMS':{
         'In Space High':'InSpaceHigh',
         'In Space Low':'InSpaceLow',
         'Flying High':'FlyingHigh',
         'Flying Low':'FlyingLow',
         'Surface: Landed':'SrfLanded',
+        'Surface: Splashed':'SrfSplashed',
         'Crew Report':'crewReport',
         'EVA Report':'evaReport',
         'Gravity Scan':'gravityScan',
@@ -23,8 +25,10 @@ RESEARCH_DEPARTMENT = {
         'Seismic Scan':'seismicScan',
         'Surface Sample':'surfaceSample',
         'Materials Study':'mobileMaterialsLab',
-        'Atmospheric Pressure Scan': 'pressureScan',
+        'Atmospheric Pressure Scan': 'barometerScan',
         'Temperature Scan':'temperatureScan',
+        'Atmosphere Analysis': 'atmosphereAnalysis',
+        'Infrared Telescope': 'infraredTelescope'
     }
 }
 
@@ -84,8 +88,11 @@ function get_all_possible_science_slots(sciences){
             return true
         }
     })
+    var INSTRUMENT_NUMBER = RESEARCH_DEPARTMENT.INSTRUMENT_ORDERS.length;
     return _.sortBy(slots, function(x){
-        return [_.indexOf(RESEARCH_DEPARTMENT.LOCATION_ORDERS, x[0]), x[1]]
+        var ind1 = _.indexOf(RESEARCH_DEPARTMENT.LOCATION_ORDERS, x[0]);
+        var ind2 = _.indexOf(RESEARCH_DEPARTMENT.INSTRUMENT_ORDERS,x[1]);
+        return (ind1*INSTRUMENT_NUMBER+ind2);
     })
     
 }

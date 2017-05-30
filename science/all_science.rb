@@ -37,10 +37,10 @@ end
 
 
 MULTIPLIER_FIELDS = {
-    'Surface: Landed' => 'Surface multiplier',
-    'Surface: Splashed' => 'Surface multiplier',
-    'Flying Low' => 'Atmosphere multiplier',
-    'Flying High' => 'Atmosphere multiplier',
+    'Surface: Landed' => 'Landed multiplier',
+    'Surface: Splashed' => 'Splashed multiplier',
+    'Flying Low' => 'Low Flying multiplier',
+    'Flying High' => 'High Flying multiplier',
     'In Space Low' => 'Low space multiplier',
     'In Space High' => 'Low space multiplier'
 }
@@ -84,16 +84,18 @@ end
 
 modules = read_tsv 'modules.tsv', :rotate => true
 bodies = read_tsv 'bodies.tsv'
-biomes = read_tsv 'biomes.tsv'
+biomes_f = read_tsv 'biomes.tsv'
 situations = read_tsv 'situations.tsv'
 
+biomes={}
 for body, body_data in bodies
     biomes[body] = {"Biome"=>body,"Body"=>body,}
 end
+biomes.update(biomes_f)
 
-
-for biome, biome_data  in biomes
+for biome_full, biome_data  in biomes
     body = bodies[biome_data["Body"]]
+	biome = biome_data["Biome"]
     for module_name, module_data in modules
         for situation, situation_data in situations
             next if biome == "Water" and situation == "Surface: Landed"
@@ -101,7 +103,7 @@ for biome, biome_data  in biomes
             next unless valid_expiriment?(module_name, module_data, biome, biome_data, body, situation, situation_data)
             science = science_value(module_name, module_data, situation, body)
             science_max = max_science_value(module_name, module_data, situation, body)
-            puts [biome_data["Body"], biome_data["Biome"], module_name, module_data['Tech level'], situation, science, science_max].join(",")
+            puts [biome_data["Body"], biome, module_name, module_data['Tech level'], situation, science, science_max].join(",")
         end
     end
 end

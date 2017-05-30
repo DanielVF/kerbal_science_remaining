@@ -1,55 +1,159 @@
 Biome Full	Body	Biome	SURFACE_ONLY
-Kerbin - Space Center	Kerbin	KSC	SURFACE_ONLY
-Kerbin - Launch Pad	Kerbin	Launch Pad	SURFACE_ONLY
+Kerbol - Universal	Kerbol	Universal	
+Moho - North Pole	Moho	North Pole	
+Moho - Northern Sinkhole Ridge	Moho	Northern Sinkhole Ridge	
+Moho - Northern Sinkhole	Moho	Northern Sinkhole	
+Moho - Highlands	Moho	Highlands	
+Moho - Midlands	Moho	Midlands	
+Moho - Minor Craters	Moho	Minor Craters	
+Moho - Central Lowlands	Moho	Central Lowlands	
+Moho - Western Lowlands	Moho	Western Lowlands	
+Moho - South Western Lowlands	Moho	South Western Lowlands	
+Moho - South Eastern Lowlands	Moho	South Eastern Lowlands	
+Moho - Canyon	Moho	Canyon	
+Moho - South Pole	Moho	South Pole	
+Eve - Poles	Eve	Poles	
+Eve - Lowlands	Eve	Lowlands	
+Eve - Midlands	Eve	Midlands
+Eve - Highlands	Eve	Highlands
+Eve - Foothills	Eve	Foothills
+Eve - Peaks	Eve	Peaks
+Eve - Impact Ejecta	Eve	Impact Ejecta
+Eve - Explodium Sea	Eve	Explodium Sea
+Eve - Akatsuki Lake	Eve	Akatsuki Lake
+Eve - Shallows	Eve	Shallows
+Eve - Crater Lake	Eve	Crater Lake
+Eve - Western Sea	Eve	Western Sea
+Eve - Olympus	Eve	Olympus
+Eve - Craters	Eve	Craters
+Eve - Eastern Sea	Eve	Eastern Sea
+Gilly - Lowlands	Gilly	Lowlands
+Gilly - Midlands	Gilly	Midlands
+Gilly - Highlands	Gilly	Highlands
+Kerbin - Ice Caps	Kerbin	Ice Caps	
+Kerbin - Northern Ice Shelf	Kerbin	Northern Ice Shelf	
+Kerbin - Southern Ice Shelf	Kerbin	Southern Ice Shelf	
+Kerbin - Tundra	Kerbin	Tundra	
+Kerbin - Highlands	Kerbin	Highlands	
+Kerbin - Mountains	Kerbin	Mountains	
+Kerbin - Grasslands	Kerbin	Grasslands	
+Kerbin - Deserts	Kerbin	Deserts	
+Kerbin - Badlands	Kerbin	Badlands	
+Kerbin - Shores	Kerbin	Shores	
+Kerbin - Water	Kerbin	Water	
+Kerbin - Administration	Kerbin	Administration	SURFACE_ONLY
+Kerbin - Astronaut Complex	Kerbin	Astronaut Complex	SURFACE_ONLY
+Kerbin - Crawlerway	Kerbin	Crawlerway	SURFACE_ONLY
+Kerbin - Flag Pole	Kerbin	Flag Pole	SURFACE_ONLY
+Kerbin - LaunchPad	Kerbin	LaunchPad	SURFACE_ONLY
+Kerbin - Mission Control	Kerbin	Mission Control	SURFACE_ONLY
+Kerbin - R&D	Kerbin	R&D	SURFACE_ONLY
 Kerbin - Runway	Kerbin	Runway	SURFACE_ONLY
-Kerbin - Grasslands	Kerbin	Grasslands
-Kerbin - Shores	Kerbin	Shores
-Kerbin - Mountains	Kerbin	Mountains
-Kerbin - Highlands	Kerbin	Highlands
-Kerbin - Deserts	Kerbin	Deserts
-Kerbin - Water	Kerbin	Water
-Kerbin - Badlands	Kerbin	Badlands
-Kerbin - Tundra	Kerbin	Tundra
-Kerbin - Ice Caps	Kerbin	Ice Caps
-Mun - Midlands	Mun	Midlands
-Mun - Midland Craters	Mun	Midland Craters
-Mun - Highlands	Mun	Highlands
-Mun - Highland Craters	Mun	Highland Craters
-Mun - Canyons	Mun	Canyons
-Mun - Northern Basin	Mun	Northern Basin
-Mun - East Crater	Mun	East Crater
+Kerbin - SPH	Kerbin	SPH	SURFACE_ONLY
+Kerbin - Tracking Station	Kerbin	Tracking Station	SURFACE_ONLY
+Kerbin - VAB	Kerbin	VAB	SURFACE_ONLY
+Mun - Poles	Mun	Poles	
+Mun - Polar Lowlands	Mun	Polar Lowlands	
+Mun - Polar Crater	Mun	Polar Crater	
+Mun - Highlands	Mun	Highlands	
+Mun - Highland Craters	Mun	Highland Craters	
+Mun - Midlands	Mun	Midlands	
+Mun - Midland Craters	Mun	Midland Craters	
+Mun - Lowlands	Mun	Lowlands	
+Mun - Northern Basin	Mun	Northern Basin	
+Mun - Farside Basin	Mun	Farside Basin	
 Mun - Northwest Crater	Mun	Northwest Crater
-Mun - Southwest Crater	Mun	Southwest Crater
-Mun - Farside Crater	Mun	Farside Crater
-Mun - Twin Craters	Mun	Twin Craters
 Mun - East Farside Crater	Mun	East Farside Crater
-Mun - Polar Crater	Mun	Polar Crater
-Mun - Poles	Mun	Poles
-Mun - Polar Lowlands	Mun	Polar Lowlands
-Minmus - Highlands	Minmus	Highlands
-Minmus - Midlands	Minmus	Midlands
-Minmus - Lowlands	Minmus	Lowlands
-Minmus - Slopes	Minmus	Slopes
+Mun - Canyons	Mun	Canyons
+Mun - Farside Crater	Mun	Farside Crater
+Mun - East Crater	Mun	East Crater
+Mun - Twin Craters	Mun	Twin Craters
+Mun - Southwest Crater	Mun	Southwest Crater
 Minmus - Poles	Minmus	Poles
-Minmus - Great Flats	Minmus	Great Flats
-Minmus - Greater Flats	Minmus	Greater Flats
+Minmus - Lowlands	Minmus	Lowlands
+Minmus - Midlands	Minmus	Midlands
+Minmus - Highlands	Minmus	Highlands
+Minmus - Slopes	Minmus	Slopes
 Minmus - Flats	Minmus	Flats
 Minmus - Lesser Flats	Minmus	Lesser Flats
-Sun - Universal	Sun	Universal
-Moho - Universal	Moho	Universal
-Eve - Universal	Eve	Universal
-Eve - Land	Eve	Land	SURFACE_ONLY
-Eve - Water	Eve	Water	SURFACE_ONLY
-Gilly - Universal	Gilly	Universal
-Duna - Universal	Duna	Universal
-Ike - Universal	Ike	Universal
-Dres - Universal	Dres	Universal
+Minmus - Great Flats	Minmus	Great Flats
+Minmus - Greater Flats	Minmus	Greater Flats
+Duna - Poles	Duna	Poles
+Duna - Polar Highlands	Duna	Polar Highlands
+Duna - Polar Craters	Duna	Polar Craters
+Duna - Highlands	Duna	Highlands
+Duna - Midlands	Duna	Midlands
+Duna - Lowlands	Duna	Lowlands
+Duna - Craters	Duna	Craters
+Duna - Midland Sea	Duna	Midland Sea
+Duna - Northern Basin	Duna	Northern Basin
+Duna - Southern Basin	Duna	Southern Basin
+Duna - Northern Shelf	Duna	Northern Shelf
+Duna - Midland Canyon	Duna	Midland Canyon
+Duna - Eastern Canyon	Duna	Eastern Canyon
+Duna - Western Canyon	Duna	Western Canyon
+Ike - Polar Lowlands	Ike	Polar Lowlands
+Ike - Midlands	Ike	Midlands
+Ike - Lowlands	Ike	Lowlands
+Ike - Eastern Mountain Ridge	Ike	Eastern Mountain Ridge
+Ike - Western Mountain Ridge	Ike	Western Mountain Ridge
+Ike - Central Mountain Range	Ike	Central Mountain Range
+Ike - South Eastern Mountain Range	Ike	South Eastern Mountain Range
+Ike - South Pole	Ike	South Pole
+Dres - Poles	Dres	Poles
+Dres - Highlands	Dres	Highlands
+Dres - Midlands	Dres	Midlands
+Dres - Lowlands	Dres	Lowlands
+Dres - Ridges	Dres	Ridges
+Dres - Impact Ejecta	Dres	Impact Ejecta
+Dres - Impact Craters	Dres	Impact Craters
+Dres - Canyons	Dres	Canyons
 Jool - Universal	Jool	Universal
-Laythe - Universal	Laythe	Universal
-Laythe - Land	Laythe	Land	SURFACE_ONLY
-Laythe - Water	Laythe	Water	SURFACE_ONLY
-Vall - Universal	Vall	Universal
-Tylo - Universal	Tylo	Universal
-Bop - Universal	Bop	Universal
-Pol - Universal	Pol	Universal
-Eeloo - Universal	Eeloo	Universal
+Laythe - Poles	Laythe	Poles
+Laythe - Shores	Laythe	Shores
+Laythe - Dunes	Laythe	Dunes
+Laythe - Crescent Bay	Laythe	Crescent Bay
+Laythe - The Sagen Sea	Laythe	The Sagen Sea
+Laythe - Crater Island	Laythe	Crater Island
+Laythe - Shallows	Laythe	Shallows
+Laythe - Crater Bay	Laythe	Crater Bay
+Laythe - DeGrasse Sea	Laythe	DeGrasse Sea
+Laythe - Peaks	Laythe	Peaks
+Vall - Poles	Vall	Poles
+Vall - Highlands	Vall	Highlands
+Vall - Midlands	Vall	Midlands
+Vall - Lowlands	Vall	Lowlands
+Vall - Mountains	Vall	Mountains
+Vall - Northeast Basin	Vall	Northeast Basin
+Vall - Northwest Basin	Vall	Northwest Basin
+Vall - Southern Basin	Vall	Southern Basin
+Vall - Southern Valleys	Vall	Southern Valleys
+Tylo - Highlands	Tylo	Highlands
+Tylo - Midlands	Tylo	Midlands
+Tylo - Lowlands	Tylo	Lowlands
+Tylo - Mara	Tylo	Mara
+Tylo - Minor Craters	Tylo	Minor Craters
+Tylo - Gagarin Crater	Tylo	Gagarin Crater
+Tylo - Grissom Crater	Tylo	Grissom Crater
+Tylo - Galileio Crater	Tylo	Galileio Crater
+Tylo - Tycho Crater	Tylo	Tycho Crater
+Bop - Poles	Bop	Poles
+Bop - Slopes	Bop	Slopes
+Bop - Peaks	Bop	Peaks
+Bop - Valley	Bop	Valley
+Bop - Ridges	Bop	Ridges
+Pol - Poles	Pol	Poles
+Pol - Lowlands	Pol	Lowlands
+Pol - Midlands	Pol	Midlands
+Pol - Highlands	Pol	Highlands
+Eeloo - Poles	Eeloo	Poles
+Eeloo - Northern Glaciers	Eeloo	Northern Glaciers
+Eeloo - Midlands	Eeloo	Midlands
+Eeloo - Lowlands	Eeloo	Lowlands
+Eeloo - Ice Canyons	Eeloo	Ice Canyons
+Eeloo - Highlands	Eeloo	Highlands
+Eeloo - Craters	Eeloo	Craters
+Eeloo - Fragipan	Eeloo	Fragipan
+Eeloo - Babbage Patch	Eeloo	Babbage Patch
+Eeloo - Southern Glaciers	Eeloo	Southern Glaciers
+Eeloo - Mu Glacier	Eeloo	Mu Glacier
